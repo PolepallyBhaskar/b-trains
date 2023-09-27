@@ -1,0 +1,37 @@
+{
+  "name": "b-trains",
+  "description": "",
+  "main": "./src/server.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --fix . --cache ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run lint --quiet ./src --out-dir --copy-files",
+    "server": "cross-env NODE_ENV=dev node  ./src/server",
+    "watch": "nodemon --ignore node_modules --exec npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolepallyBhaskar/b-trains.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PolepallyBhaskar/b-trains/issues"
+  },
+  "homepage": "https://github.com/PolepallyBhaskar/b-trains#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.6.0",
+    "dotenv-parse-variables": "^2.0.0",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^7.5.3",
+    "nodemon": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-plugin-react": "^7.33.2"
+  }
+}
