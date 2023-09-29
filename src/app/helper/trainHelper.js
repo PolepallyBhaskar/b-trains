@@ -5,8 +5,7 @@ import _ from 'lodash';
 class TrainHelper {
 
     static async create(req) {
-        let trainObj = new Train(_.pick(req.body, ['name']));
-        
+        let trainObj = new Train(_.pick(req.body, ['name', 'trainType', 'avgSpeed', 'depStation', 'curStation','eta']));
         return await trainObj.save();
 
     }
@@ -36,7 +35,13 @@ class TrainHelper {
 
     }
     static async getAllTrains() {
-        return await Train.find()
+        return await Train.find(
+            {
+            eta: {
+                $gte: Date.now(),
+            }
+        }
+        )
 
     }
 

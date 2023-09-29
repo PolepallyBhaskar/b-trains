@@ -35,6 +35,6 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/api/trains', trains);
 
 app.listen(3000, function () {
-  console.log(' app listening on port 3000!');
+  console.log('========App listening on port 3000===============');
 });
 export default app; 

@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 let schema = new mongoose.Schema(
     {
         name: {
-            type: Number,
+            type: String,
             required: true,
         },
         trainType: {
@@ -25,7 +25,7 @@ let schema = new mongoose.Schema(
             required: true,
         },
         eta: {
-            type: Date,
+            type: String,
             required: true,
         },
     },
